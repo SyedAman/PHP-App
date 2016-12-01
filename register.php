@@ -1,5 +1,10 @@
 <!-- User Registration Page -->
 
+<!-- Output PHP Version -->
+<?php
+echo 'Current PHP version: ' . phpversion();
+?>
+
 <html>
     <head>
         <title>PHP Register Page</title>
@@ -39,8 +44,8 @@
         $bool = true;
 
         // Connect to MySQL server
-        mysqli_connect("localhost", "root", "") or die (mysqli_error_list());
+        $mysqlServer = mysqli_connect("127.0.0.1", "root", "") or die ("cannot connect to MySQL server" . mysqli_error_list());
         // Select database or throw error
-        mysqli_select_db("first_db") or die("Cannot connect to database");
+        mysqli_select_db("first_db") or die($mysqlServer, "cannot connect to database");
     }
 ?>
