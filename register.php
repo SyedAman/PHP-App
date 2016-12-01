@@ -18,15 +18,22 @@
 
 <!-- Access database and add registered users -->
 <?php
-    // Look for REQUEST_METHOD in $SERVER array created by Apache web server and see if it matches with POST requests
+    // Look for REQUEST_METHOD in $SERVER array created by Apache web server
+    // Checks if form has received a POST request via submit button method="POST"
     if($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Escape strings to add to safely add to MySQL query
-        // Add unescaped strings to POST request
+        
+        // Encapsulate and escape strings to add to safely add to MySQL query from SQL Injections
         $username = mysqli_real_escape_string($_POST['username']);
         $password = mysqli_real_escape_string($_POST['password']);
 
-        // Log user registration info with concatination
+        // Log user registration info with concatenation
         echo "Username entered is " . $username . "<br>";
         echo "Password entered is " . $password . "<br>";
+
+        // Add POST requests to MySQL database
+        $bool = true;
+
+        // Connect to MySQL server
+        mysqli_connect("localhost:81", "root", "") or die (mysqli_error_list());
     }
 ?>
