@@ -14,6 +14,8 @@ De-briefing and Summary - Final output and some notes. FAQ's are also place here
 
 Run Apache & XAMPP web server
 Run MySQL server
+Create database tables in PHPMYADMIN
+Access database via PHP
 Creating the public HTML Pages
 Creating the database and it's tables
 Adding users to the database
