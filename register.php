@@ -22,8 +22,8 @@
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         // Escape strings to add to safely add to MySQL query
         // Add unescaped strings to POST request
-        $username = mysql_real_escape_string($_POST['username']);
-        $password = mysql_real_escape_string($_POST['password']);
+        $username = new PDO('mysql:host=localhost:81/phpmyadmin;dbname=first_db;charset=utf8mb4', $_POST['username']);
+        $password = new PDO('mysql:host=localhost:81/phpmyadmin;dbname=first_db;charset=utf8mb4', $_POST['password']);
 
         // Log user registration info with concatination
         echo "Username entered is " . $username . "<br>";
