@@ -19,7 +19,7 @@
 <!-- Access database and add registered users -->
 <?php
     // Look for REQUEST_METHOD in $SERVER array created by Apache web server and see if it matches with POST requests
-    if($SERVER["REQUEST_METHOD"] == "POST" {
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
         // Escape strings to add to safely add to MySQL query
         // Add unescaped strings to POST request
         $username = mysql_real_escape_string($_POST['username']);
