@@ -22,8 +22,8 @@
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         // Escape strings to add to safely add to MySQL query
         // Add unescaped strings to POST request
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = mysqli_real_escape_string($_POST['username']);
+        $password = mysqli_real_escape_string($_POST['password']);
 
         // Log user registration info with concatination
         echo "Username entered is " . $username . "<br>";
