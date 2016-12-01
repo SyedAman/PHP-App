@@ -18,6 +18,9 @@
 
 <!-- Access database and add registered users -->
 <?php
+    // ignore warnings
+    error_reporting(E_ERROR | E_PARSE);
+    
     // Look for REQUEST_METHOD in $SERVER array created by Apache web server
     // Checks if form has received a POST request via submit button method="POST"
     if($_SERVER["REQUEST_METHOD"] == "POST") {
