@@ -1,5 +1,6 @@
 # PHP-App
-Basic Authentication, Membership and CRUD functionalities
+
+User Authentication, Membership and CRUD (Create, Read, Update, Delete) functionalities
 
 ## Topics Covered
 
@@ -11,7 +12,7 @@ De-briefing and Summary - Final output and some notes. FAQ's are also place here
 
 ## Tasks Covered
 
-Run Apache web server
+Run Apache & XAMPP web server
 Run MySQL server
 Creating the public HTML Pages
 Creating the database and it's tables
