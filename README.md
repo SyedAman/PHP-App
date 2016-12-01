@@ -11,7 +11,8 @@ De-briefing and Summary - Final output and some notes. FAQ's are also place here
 
 ## Tasks Covered
 
-Setting up your server
+Run Apache web server
+Run MySQL server
 Creating the public HTML Pages
 Creating the database and it's tables
 Adding users to the database
