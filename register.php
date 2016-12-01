@@ -20,7 +20,7 @@
 <?php
     // ignore warnings
     error_reporting(E_ERROR | E_PARSE);
-    
+
     // Look for REQUEST_METHOD in $SERVER array created by Apache web server
     // Checks if form has received a POST request via submit button method="POST"
     if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -34,6 +34,8 @@
         echo "Password entered is " . $password . "<br>";
 
         // Add POST requests to MySQL database
+        
+        // Hold true or false value
         $bool = true;
 
         // Connect to MySQL server
