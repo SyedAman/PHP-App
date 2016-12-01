@@ -40,5 +40,7 @@
 
         // Connect to MySQL server
         mysqli_connect("localhost", "root", "") or die (mysqli_error_list());
+        // Select database or throw error
+        mysqli_select_db("first_db") or die("Cannot connect to database");
     }
 ?>
