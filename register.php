@@ -34,6 +34,6 @@
         $bool = true;
 
         // Connect to MySQL server
-        mysqli_connect("localhost:81", "root", "") or die (mysqli_error_list());
+        mysqli_connect("localhost", "root", "") or die (mysqli_error_list());
     }
 ?>
