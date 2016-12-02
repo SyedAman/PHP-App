@@ -1,3 +1,10 @@
+<!-- Login Page -->
+
+<!-- Output PHP Version -->
+<?php
+echo 'Current PHP version: ' . phpversion();
+?>
+
 <html>
     <head>
         <title>PHP Login Page</title>
