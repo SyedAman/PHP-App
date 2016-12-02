@@ -45,5 +45,8 @@ echo 'Current PHP version: ' . phpversion();
         
         // Hold true or false value
         $bool = true;
+
+        // Query the users table
+        $query = $mysqlServer->query("Select * from users");
     }
 ?>
