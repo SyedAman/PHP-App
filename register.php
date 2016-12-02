@@ -61,11 +61,17 @@ echo 'Current PHP version: ' . phpversion();
             printf("Select returned %d rows.\n", $userQuery->num_rows);
         }
 
+        // Check to see if username is already taken
+
         // loop through each row in users table
         while ($row = $userQuery->fetch_array())
         {
-            // Pass usernames into corresponding rows
-            $table_users = $row['username'];
+            // Throw error upon finding already taken username
+            if ($username == $row['username']) {
+                // Flag upon taken username
+                $bool = false;
+
+            }
         }
     }
 ?>
