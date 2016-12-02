@@ -34,8 +34,8 @@ echo 'Current PHP version: ' . phpversion();
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Encapsulate and escape strings to add to safely add to MySQL query from SQL Injections
-        $username = mysqli_real_escape_string($_POST['username']);
-        $password = mysqli_real_escape_string($_POST['password']);
+        $username = $mysqlServer->real_escape_string($_POST['username']);
+        $password = $mysqlServer->real_escape_string($_POST['password']);
 
         // Log user registration info with concatenation
         echo "Username entered is " . $username . "<br>";
