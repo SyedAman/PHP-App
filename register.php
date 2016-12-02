@@ -56,15 +56,14 @@ echo 'Current PHP version: ' . phpversion();
         $bool = true;
 
         // Select queries from users table
-        if ($queryResult = $mysqlServer->query("SELECT * FROM users")) {
+        if ($userQuery = $mysqlServer->query("SELECT * FROM users")) {
             // Output amount of fetched queries
-            printf("Select returned %d rows.\n", $queryResult->num_rows);
+            printf("Select returned %d rows.\n", $userQuery->num_rows);
         }
 
-        // display all fetched rows
-        while ($row = $queryResult->fetch_array())
+        // loop through each row in users table
+        while ($row = $userQuery->fetch_array())
         {
-            print("fart");
         }
     }
 ?>
