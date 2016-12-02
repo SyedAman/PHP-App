@@ -64,6 +64,8 @@ echo 'Current PHP version: ' . phpversion();
         // loop through each row in users table
         while ($row = $userQuery->fetch_array())
         {
+            // Pass usernames into corresponding rows
+            $table_users = $row['username'];
         }
     }
 ?>
