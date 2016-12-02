@@ -27,7 +27,16 @@ echo 'Current PHP version: ' . phpversion();
     error_reporting(E_ERROR | E_PARSE);
 
     // Connect to MySQL server and database
-    $mysqlServer = mysqli_connect("127.0.0.1", "root", "", "first_db") or die ("cannot connect to MySQL server" . mysqli_error_list());
+    $mysqlServer = mysqli_connect("127.0.0.1", "root", "", "first_db");
+
+    // Check server connection 
+    if ($mysqlServer->connect_errorno) {
+        printf("Connection failed: %s\n", $mysqlServer->connect_error);
+        exit();
+    }
+    else {
+        printf("Connection successful" . "<br>");
+    }
 
     // Look for REQUEST_METHOD in $SERVER array created by Apache web server
     // Checks if form has received a POST request via submit button method="POST"
