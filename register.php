@@ -76,5 +76,11 @@ echo 'Current PHP version: ' . phpversion();
                 print '<script>window.location.assign("register.php");</script>';
             }
         }
+
+        // If username not taken, insert values to table
+        if ($bool) {
+            // Insert username and password value into users table
+            $mysqlServer->query("INSERT INTO users (username, password) VALUES ('$username', '$password')");
+        }
     }
 ?>
