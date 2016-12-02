@@ -70,7 +70,8 @@ echo 'Current PHP version: ' . phpversion();
             if ($username == $row['username']) {
                 // Flag upon taken username
                 $bool = false;
-
+                // Output error message
+                print '<script>alert("Username is already taken!");</script>';
             }
         }
     }
