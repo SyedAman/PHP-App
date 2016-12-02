@@ -43,9 +43,7 @@ echo 'Current PHP version: ' . phpversion();
         // Hold true or false value
         $bool = true;
 
-        // Connect to MySQL server
+        // Connect to MySQL server and database
         $mysqlServer = mysqli_connect("127.0.0.1", "root", "", "first_db") or die ("cannot connect to MySQL server" . mysqli_error_list());
-        // Select database or throw error
-        // mysqli_select_db("first_db") or die($mysqlServer, "cannot connect to database");
     }
 ?>
