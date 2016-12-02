@@ -72,7 +72,7 @@ echo 'Current PHP version: ' . phpversion();
                 $bool = false;
                 // Output error message
                 print '<script>alert("Username is already taken!");</script>';
-                // Redirects to register.php upon username taken
+                // Redirects to registration page upon username taken
                 print '<script>window.location.assign("register.php");</script>';
             }
         }
@@ -81,6 +81,10 @@ echo 'Current PHP version: ' . phpversion();
         if ($bool) {
             // Insert username and password value into users table
             $mysqlServer->query("INSERT INTO users (username, password) VALUES ('$username', '$password')");
+            // Output successful registration
+            print '<script>alert("Successful Registered!");</script>';
+            // Redirects to registration page upon registration
+            print '<script>window.location.assign("register.php");</script>';
         }
     }
 ?>
