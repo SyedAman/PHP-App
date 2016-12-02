@@ -35,7 +35,7 @@ echo 'Current PHP version: ' . phpversion();
         exit();
     }
     else {
-        printf("Connection successful" . "<br>");
+        printf("Connection successful" . "<br><br>");
     }
 
     // Look for REQUEST_METHOD in $SERVER array created by Apache web server
@@ -48,14 +48,16 @@ echo 'Current PHP version: ' . phpversion();
 
         // Log user registration info with concatenation
         echo "Username entered is " . $username . "<br>";
-        echo "Password entered is " . $password . "<br>";
+        echo "Password entered is " . $password . "<br><br>";
 
         // Add POST requests to MySQL database
         
         // Hold true or false value
         $bool = true;
 
-        // Query the users table
-        $query = $mysqlServer->query("SELECT * FROM users");
+        // Select queries from users table
+        if ($queryResult = $query = $mysqlServer->query("SELECT * FROM users")) {
+            printf("Select returned %d rows.\n", $queryResult->num_rows);
+        }
     }
 ?>
