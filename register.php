@@ -71,9 +71,17 @@ echo 'Current PHP version: ' . phpversion();
                 // Flag upon taken username
                 $bool = false;
                 // Output error message
-                print '<script>alert("Username is already taken!");</script>';
+                print (
+                    '<script>
+                        alert("Username is already taken!");
+                    </script>'
+                );
                 // Redirects to registration page upon username taken
-                print '<script>window.location.assign("register.php");</script>';
+                print (
+                    '<script>
+                        window.location.assign("register.php");
+                    </script>'
+                );
             }
         }
 
