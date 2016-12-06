@@ -82,9 +82,17 @@ echo 'Current PHP version: ' . phpversion();
             // Insert username and password value into users table
             $mysqlServer->query("INSERT INTO users (username, password) VALUES ('$username', '$password')");
             // Output successful registration
-            print '<script>alert("Successfuly registered!");</script>';
-            // Redirects to registration page upon registration
-            print '<script>window.location.assign("register.php");</script>';
+            print (
+                '<script>
+                    alert("Successfuly registered!");
+                </script>'
+            );
+            // Redirect to registration page upon registration
+            print (
+                '<script>
+                    window.location.assign("register.php");
+                </script>'
+            );
         }
     }
 ?>
