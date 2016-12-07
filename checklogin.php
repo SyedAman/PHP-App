@@ -19,4 +19,8 @@ if ($mysqlServer->connect_errorno) {
 // Escape strings to protect against SQL injections
 $username = $mysqlServer->real_escape_string($_POST['username']);
 $password = $mysqlServer->real_escape_string($_POST['password']);
+
+// store login time
+$_SESSION['time'] = time();
+
 ?>
