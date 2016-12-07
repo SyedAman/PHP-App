@@ -11,7 +11,7 @@ echo 'Current PHP version: ' . phpversion();
     </head>
     <body>
         <?php
-            echo "<p>Hello World!</p>";
+            print ("<p>Login! If you don't have an account, register!</p>");
         ?>
         <a href="login.php"> Click here to login</a> <br/>
         <a href="register.php"> Click here to register</a>
