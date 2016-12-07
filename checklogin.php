@@ -8,5 +8,6 @@ session_start();
 $mysqlServer = mysqli_connect("localhost", "root", "", "first_db");
 
 // POST username and password to web server
-// $username = mysq
+$username = $_POST['username'];
+$password = $_POST['password'];
 ?>
