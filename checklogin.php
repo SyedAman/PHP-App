@@ -8,6 +8,7 @@ session_start();
 $mysqlServer = mysqli_connect("localhost", "root", "", "first_db");
 
 // POST username and password to web server
-$username = $_POST['username'];
-$password = $_POST['password'];
+// Escape strings to protect against SQL injections
+$username = $mysqlServer->real_escape_string($_POST['username']);
+$password = $mysqlServer->real_escape_string($_POST['password']);
 ?>
