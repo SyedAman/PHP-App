@@ -1,4 +1,4 @@
-<!-- User Login & Authentication Page -->
+<!-- User Login Page -->
 
 <!-- Output PHP Version -->
 <?php
@@ -18,9 +18,3 @@ echo 'Current PHP version: ' . phpversion();
         </form>
     </body>
 </html>
-
-<!-- Call PHP after HTML ends -->
-<?php
-// create session and call read session save handler to populate $_SESSION superglobal with session date 
-session_start();
-?>
