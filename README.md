@@ -4,10 +4,10 @@ User Authentication, Membership and CRUD (Create, Read, Update, Delete) function
 
 ## Topics Covered
 
-- Utilize CRUD statements in SQL - Create, read, update and delete records in a database.
+- CRUD statements in SQL - Create, read, update and delete records in a database.
 - Simple authentication and security - Logging in and out, handling unauthorized users and restricting access.
 - Simple time and date manipulation - Displaying time and date postings and monitoring your posts.
-- Displaying public and private data - Simply display information for logged-in users only and for the public
+- Displaying public and private data - Display information for logged-in users and for the public
 - De-briefing and Summary - Final output and some notes. FAQ's are also place here.
 
 ## Tasks Covered
@@ -22,7 +22,7 @@ User Authentication, Membership and CRUD (Create, Read, Update, Delete) function
 - User log-in: Authentication
 - Setting up the home page for Logged-in users and Logging-out
 - Testing Page Security
-- Adding data to the list - User Access Only
+- Adding data to the list - User Access
 - Displaying data in the home page
 - Editing Data
 - Deleting data
